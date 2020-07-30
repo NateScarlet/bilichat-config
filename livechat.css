@@ -1,0 +1,163 @@
+html {
+  font-size: 14px; /* 全局尺寸控制 */
+}
+
+#chat {
+  text-shadow: -0.5px -0.5px 0 gray, 0.5px 0.5px 0 black;
+}
+
+#items {
+  overflow: hidden;
+}
+*:not(.yt-chat-badge):not(.yt-emoji-icon) {
+  background: transparent;
+}
+
+.gaming-promo,
+#live-comments-controls,
+::-webkit-scrollbar,
+wbr,
+.is-deleted,
+[is-deleted],
+#panel-pages,
+yt-live-chat-header-renderer {
+  display: none;
+}
+
+#chat #author-photo {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.2rem;
+}
+
+#chat #author-photo #img {
+  width: 100%;
+  height: 100%;
+}
+
+#chat #author-name {
+  font-size: 1rem;
+  vertical-align: middle;
+  color: white;
+}
+
+#chat #chat-badges #image {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* break line after badge */
+#chat #chat-badges::after {
+  content: "";
+  display: block;
+}
+
+#chat #image img {
+  width: 100%;
+  height: 100%;
+}
+
+#chat #message {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: white;
+}
+
+#chat #repeat_count {
+  font-size: 1.2rem;
+}
+
+#chat #author-name::after {
+  content: ":";
+  font-weight: 900;
+}
+#chat #message a {
+  color: skyblue;
+  font-size: 0;
+  line-height: 1.2rem;
+}
+#chat #message a::after {
+  content: attr(href);
+  font-size: 1rem;
+}
+
+#chat yt-live-chat-item-list-renderer.yt-live-chat-renderer {
+  mask-image: linear-gradient(transparent, white 2rem);
+}
+
+#chat yt-live-chat-text-message-renderer {
+  align-items: center;
+  font-size: 2rem;
+}
+
+#chat yt-live-chat-author-chip {
+  margin: 0;
+}
+
+#chat #card {
+  font-size: 2rem;
+}
+#chat #card #author-photo {
+  width: 4rem;
+  height: 4rem;
+}
+#chat #card #author-photo #img {
+  width: 100%;
+  height: 100%;
+}
+#chat #card #author-name {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+#chat #card #header-content {
+  line-height: 2rem;
+}
+#chat #card #purchase-amount {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+#ticker #items {
+  height: 3rem;
+}
+
+#ticker #container {
+  display: flex;
+  align-items: center;
+  margin: 0.2rem 0;
+  height: 2.5rem;
+}
+
+#ticker #container #author-photo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+#ticker #container #author-photo #img {
+  width: 100%;
+  height: 100%;
+}
+#ticker #container #text {
+  display: inline-block;
+  font-size: 2rem;
+  color: white;
+  margin: 0 1rem;
+  min-width: 8rem;
+}
+
+@keyframes chat-fade {
+  0% {
+    opacity: 1;
+    position: relative;
+  }
+  99% {
+    opacity: 0;
+    position: relative;
+  }
+  100% {
+    opacity: 0;
+    position: absolute;
+  }
+}
+yt-live-chat-text-message-renderer {
+  animation: chat-fade 5s 30s forwards;
+}
